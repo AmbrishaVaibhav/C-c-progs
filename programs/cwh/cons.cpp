@@ -13,7 +13,7 @@ class complex
 };
 complex :: complex(void)
 {
-    a=0;
+    a=10;
     b=0;
     
 }
