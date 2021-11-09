@@ -1,0 +1,1 @@
+void getdata(char *n,int r,int a,char *c,int *m)

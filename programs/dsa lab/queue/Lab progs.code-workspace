@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\oop-lab programs"
+		},
+		{
+			"path": "..\\..\\rem"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\OneDrive\\Desktop\\cwh"
+		},
+		{
+			"path": "..\\..\\Web development"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Web development",
+		"files.associations": {
+			"TEST1.C": "cpp"
+		}
+	}
+}
