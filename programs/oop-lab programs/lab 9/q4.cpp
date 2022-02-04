@@ -5,7 +5,7 @@ class number
     protected:
     int val;
     public:
-    number(int i)
+    number(int i=0)
     {
         val=i;
     }
@@ -20,21 +20,10 @@ class hexa:public number
     }
     void show()
     {
-        cout<<hex<<val<<endl;
+        cout<<"Number :"<<hex<<val<<endl;
     }
 };
-class deci:public number
-{
-    public:
-    deci(int i):number(i)
-    {
-    }
-    
-    void show()
-    {
-        cout<<val<<endl;
-    }
-};
+
 class octa:public number
 {
     public:
@@ -44,18 +33,30 @@ class octa:public number
     
     void show()
     {
-        cout<<oct<<val<<endl;
+        cout<<"Number :"<<oct<<val<<endl;
+    }
+};
+class decimal:public number
+{
+    public:
+    decimal(int i):number(i)
+    {
+    }
+    
+    void show()
+    {
+        cout<<"Number :"<<val<<endl;
     }
 };
 int main()
 {
     number *ptr[3];
-    hexa h(3);
-    deci d(4);
-    octa o(5);
-    ptr[0]=&h;
-    ptr[1]=&d;
-    ptr[2]=&o;
+    hexa h(10);
+    octa o(10);
+    decimal d(10);
+    ptr[0]=&d;
+    ptr[1]=&o;
+    ptr[2]=&h;
 
     ptr[0]->show();
     ptr[1]->show();

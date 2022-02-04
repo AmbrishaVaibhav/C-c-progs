@@ -133,5 +133,37 @@ int a,b,c;
     return 0;
 }
 
+void iterativeTraversal(Node* root){
+	if(root == NULL) return;
+  	stack<Node*> s;
+  	s.push(root);
+  	while(!s.empty()){
+        Node* cur = s.top();
+        if(cur == NULL) { 
+          s.pop(); 
+          continue; 
+        }
         
-            
+      /*Pre-Order Iterative	
+      	if (cnt[cur] == 0) cout << cur->data << " " ;
+        else if (cnt[cur] == 1) s.push(cur->left);
+        else if (cnt[cur] == 2) s.push(cur->right);
+        else s.pop();
+      */
+      
+      /*In-Order Iterative
+        if (cnt[cur] == 0) s.push(cur->left);
+        else if (cnt[cur] == 1) cout << cur->data << " " ;
+        else if (cnt[cur] == 2) s.push(cur->right);
+        else s.pop();
+      */
+      
+      /* Post-Order Iterative */
+      	if (cnt[cur] == 0) s.push(cur->left);
+        else if (cnt[cur] == 1) s.push(cur->right);
+        else if (cnt[cur] == 2) cout << cur->data << " " ;
+        else s.pop();
+      	
+      	cnt[cur]++;
+    }
+}
